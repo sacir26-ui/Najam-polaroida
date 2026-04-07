@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/navbar";
+
+import Home from "./pages/Home";
+import Onama from "./pages/Onama";
+import Proizvodi from "./pages/Proizvodi";
+import Paketi from "./pages/Paketi";
+import Donacije from "./pages/Donacije";
+import Kontakt from "./pages/Kontakt";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/o-nama" element={<Onama />} />
+        <Route path="/proizvodi" element={<Proizvodi />} />
+        <Route path="/paketi" element={<Paketi />} />
+        <Route path="/donacije" element={<Donacije />} />
+        <Route path="/kontakt" element={<Kontakt />} />
+      </Routes>
+    </Router>
   );
 }
 

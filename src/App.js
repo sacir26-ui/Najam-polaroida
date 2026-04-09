@@ -8,6 +8,7 @@ import Proizvodi from "./pages/Proizvodi";
 import Paketi from "./pages/Paketi";
 import Donacije from "./pages/Donacije";
 import Kontakt from "./pages/Kontakt";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,16 @@ function App() {
         <Route path="/donacije" element={<Donacije />} />
         <Route path="/kontakt" element={<Kontakt />} />
       </Routes>
+
+
+
+
+
+
+
+      <Footer />
+
+      
     </Router>
   );
 }

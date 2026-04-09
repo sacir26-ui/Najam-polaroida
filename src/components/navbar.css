@@ -2,7 +2,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
 .custom-navbar {
   background: transparent;
   padding: 10px 0;
@@ -11,27 +10,33 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: none;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
 }
 
+.custom-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BRAND */
 .custom-brand {
   display: flex;
   align-items: center;
-  margin-right: 24px;
+  padding: 0;
+  margin: 0;
+  flex: 0 0 auto;
+  max-width: 180px;
+  overflow: hidden;
+  text-decoration: none;
 }
 
 .logo {
-  height: 110px !important;
-  max-height: none !important;
-  width: auto;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.03);
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
 }
 
 .custom-nav-list {
@@ -79,32 +84,18 @@ body {
   filter: brightness(0) invert(1);
 }
 
-@media (max-width: 1199.98px) {
-  .logo {
-    height: 95px !important;
-  }
-
-  .custom-nav-link {
-    font-size: 16px;
-    padding: 9px 12px !important;
-  }
-
-  .custom-nav-list {
-    gap: 8px;
-  }
-}
-
 @media (max-width: 991.98px) {
   .custom-navbar {
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   .custom-brand {
-    margin-right: 0;
+    max-width: 140px;
   }
 
   .logo {
-    height: 78px !important;
+    max-width: 140px;
+    max-height: 48px;
   }
 
   .navbar-collapse {
@@ -115,32 +106,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
 
-  .custom-nav-list {
-    gap: 6px;
-    align-items: stretch !important;
-  }
-
   .custom-nav-link {
-    font-size: 17px;
-    padding: 12px 14px !important;
+    color: #2b2b2b !important;
   }
-
-  .nav-contact-btn {
-    text-align: center;
-  }
-}
-.custom-navbar {
-  padding: 4px 0;
-  min-height: unset;
-}
-
-.custom-brand {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.logo {
-  height: 110px !important;
-  margin: -10px 0; /* POVUČE GA GORE */
 }

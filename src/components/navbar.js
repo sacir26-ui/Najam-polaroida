@@ -5,8 +5,13 @@ function Navbar() {
   return (
     <nav className="custom-navbar navbar navbar-expand-lg">
       <div className="container">
+
         <Link className="navbar-brand custom-brand" to="/">
-          <img src="/np-materijali/logo.png" alt="Najam Polaroida logo" className="logo" />
+          <img
+            src={process.env.PUBLIC_URL + "/np-materijali/logo.png"}
+            alt="Najam Polaroida"
+            className="logo" 
+          />
         </Link>
 
         <button
@@ -23,31 +28,37 @@ function Navbar() {
 
         <div className="collapse navbar-collapse justify-content-end" id="mainNavbar">
           <ul className="navbar-nav align-items-lg-center custom-nav-list">
+
             <li className="nav-item">
               <Link className="nav-link custom-nav-link" to="/o-nama">
                 O nama
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link custom-nav-link" to="/proizvodi">
                 Proizvodi i usluge
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link custom-nav-link" to="/paketi">
                 Paketi
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link custom-nav-link" to="/donacije">
                 Donacije
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link custom-nav-link nav-contact-btn" to="/kontakt">
                 Kontakt
               </Link>
             </li>
+
           </ul>
         </div>
       </div>

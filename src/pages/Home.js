@@ -3,11 +3,10 @@ function Home() {
     <>
       <section className="home-hero">
 
-        <div
+       <div
           className="home-hero-bg"
           style={{
-            backgroundImage:
-              'linear-gradient(135deg, rgba(35,20,55,0.72), rgba(97,58,120,0.6)), url("/np-materijali/hero-slika.png")'
+            backgroundImage: `linear-gradient(135deg, rgba(35,20,55,0.72), rgba(97,58,120,0.6)), url(${process.env.PUBLIC_URL}/np-materijali/hero-slika.png)`
           }}
         ></div>
 

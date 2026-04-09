@@ -12,7 +12,12 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
+
+    
+    <Router basename="/sasimovic">
+
+
+
       <Navbar />
 
       <Routes>
@@ -32,7 +37,7 @@ function App() {
 
       <Footer />
 
-      
+
     </Router>
   );
 }

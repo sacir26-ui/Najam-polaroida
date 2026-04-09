@@ -10,7 +10,7 @@ function Footer() {
           <div className="col-lg-4">
             <div className="footer-brand">
               <img
-                src="/np-materijali/logo.png"
+                src={process.env.PUBLIC_URL + "/np-materijali/logo.png"}
                 alt="Najam Polaroida"
                 className="footer-logo"
               />

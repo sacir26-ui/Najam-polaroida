@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 
 function Proizvodi() {
@@ -50,7 +51,7 @@ function Proizvodi() {
   ];
 
   return (
-    <main className="products-page">
+    <main className="products-page page-fade">
       <section
         className="products-hero"
         style={{
@@ -135,12 +136,12 @@ function Proizvodi() {
           </p>
 
           <div className="products-cta-buttons">
-            <a href="/kontakt" className="btn-primary-custom">
+            <Link to="/kontakt" className="btn-primary-custom">
               Kontaktirajte nas
-            </a>
-            <a href="/paketi" className="btn-outline-custom">
+            </Link>
+            <Link to="/paketi" className="btn-outline-custom">
               Pogledaj pakete
-            </a>
+            </Link>
           </div>
         </div>
       </section>

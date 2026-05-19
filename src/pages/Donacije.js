@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 
 function Donacije() {
@@ -29,7 +30,7 @@ function Donacije() {
   ];
 
   return (
-    <main className="donations-page">
+    <main className="donations-page page-fade">
       <section
         className="donations-hero"
         style={{
@@ -132,9 +133,9 @@ function Donacije() {
             pomagati obiteljima kojima je pomoć najpotrebnija.
           </p>
 
-          <a href="/kontakt" className="btn-primary-custom">
+          <Link to="/kontakt" className="btn-primary-custom">
             Kontaktirajte nas
-          </a>
+          </Link>
         </div>
       </section>
     </main>

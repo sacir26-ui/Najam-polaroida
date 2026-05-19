@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 
 function Paketi() {
@@ -51,7 +52,7 @@ function Paketi() {
   ];
 
   return (
-    <main className="packages-page">
+    <main className="packages-page page-fade">
       <section
         className="packages-hero"
         style={{
@@ -108,9 +109,9 @@ function Paketi() {
 
                   <p>{paket.desc}</p>
 
-                  <a href="/kontakt" className="package-btn">
+                  <Link to="/kontakt" className="package-btn">
                     Zatraži ponudu
-                  </a>
+                  </Link >
                 </div>
               </div>
             ))}
@@ -135,9 +136,9 @@ function Paketi() {
               kreirat ćemo paket posebno za vaš događaj.
             </p>
 
-            <a href="/kontakt" className="btn-primary-custom">
+            <Link to="/kontakt" className="btn-primary-custom">
               Izradi svoj paket
-            </a>
+            </Link>
           </div>
         </div>
       </section>

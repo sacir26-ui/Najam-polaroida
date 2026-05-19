@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 function Onama() {
   return (
-    <main className="about-page">
+    <main className="about-page page-fade">
       <section className="page-hero about-hero">
         <div
           className="page-hero-bg"
@@ -76,12 +77,12 @@ function Onama() {
       </p>
 
       <div className="hero-buttons justify-content-center">
-        <a href="/paketi" className="btn hero-btn hero-btn-primary">
+        <Link to="/paketi" className="btn hero-btn hero-btn-primary">
           Pogledaj pakete
-        </a>
-        <a href="/kontakt" className="btn hero-btn hero-btn-secondary">
+        </Link>
+        <Link to="/kontakt" className="btn hero-btn hero-btn-secondary">
           Kontaktiraj nas
-              </a>
+        </Link >
             </div>
           </div>
         </div>

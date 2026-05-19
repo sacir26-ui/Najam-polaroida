@@ -16,6 +16,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1450px;
 }
 
 /* BRAND */
@@ -41,6 +42,7 @@ body {
 
 .custom-nav-list {
   gap: 12px;
+  margin-left: auto;
 }
 
 .custom-nav-link {
@@ -89,6 +91,10 @@ body {
     padding: 8px 0;
   }
 
+  .custom-navbar .container {
+    max-width: 100%;
+  }
+
   .custom-brand {
     max-width: 140px;
   }
@@ -104,6 +110,11 @@ body {
     padding: 18px;
     border-radius: 18px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .custom-nav-list {
+    margin-left: 0;
+    gap: 6px;
   }
 
   .custom-nav-link {

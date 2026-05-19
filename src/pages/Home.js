@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-      <section className="home-hero">
+      <section className="home-hero page-fade">
 
        <div
           className="home-hero-bg"
@@ -25,14 +26,14 @@ function Home() {
             </p>
 
             <div className="hero-buttons">
-              <a href="/proizvodi" className="btn hero-btn hero-btn-primary">
-                Pogledaj ponudu
-              </a>
+            <Link to="/proizvodi" className="btn hero-btn hero-btn-primary">
+              Pogledaj ponudu
+            </Link>
 
-              <a href="/donacije" className="btn hero-btn hero-btn-secondary">
-                Pogledaj donacije
-              </a>
-            </div>
+            <Link to="/donacije" className="btn hero-btn hero-btn-secondary">
+              Pogledaj donacije
+            </Link>
+          </div>
           </div>
         </div>
 
@@ -107,7 +108,9 @@ function Home() {
           <span className="package-badge">Standard</span>
           <h3>50 fotografija</h3>
           <p>Najčešći izbor za manje svadbe i obiteljske događaje.</p>
-          <a href="/kontakt" className="package-btn">Zatraži ponudu</a>
+          <Link to="/kontakt" className="package-btn">
+            Zatraži ponudu
+          </Link>
         </div>
       </div>
 
@@ -118,7 +121,9 @@ function Home() {
           <span className="package-badge">Plus</span>
           <h3>100 fotografija</h3>
           <p>Odličan balans cijene i količine – idealno za većinu događaja.</p>
-          <a href="/kontakt" className="package-btn">Zatraži ponudu</a>
+          <Link to="/kontakt" className="package-btn">
+            Zatraži ponudu
+          </Link>
         </div>
       </div>
 
@@ -128,16 +133,18 @@ function Home() {
           <span className="package-badge">Premium</span>
           <h3>150 fotografija</h3>
           <p>Za veće proslave i događaje s puno gostiju.</p>
-          <a href="/kontakt" className="package-btn">Zatraži ponudu</a>
+          <Link to="/kontakt" className="package-btn">
+            Zatraži ponudu
+          </Link>
         </div>
       </div>
 
     </div>
 
     <div className="text-center mt-5">
-      <a href="/paketi" className="all-packages-btn">
+      <Link to="/paketi" className="all-packages-btn">
         Pogledaj sve pakete
-      </a>
+      </Link>
     </div>
   </div>
 </section>
@@ -158,7 +165,8 @@ function Home() {
       <div className="col-lg-7">
         <div className="donation-card donation-card-main">
           <div className="donation-amount">
-          <span className="amount">1.320 €</span>
+          <span className="amount">1.320 €   </span>
+          
           <span className="amount-label">prikupljeno</span>
           </div>
           <h3>Obitelj Kolak</h3>
@@ -168,9 +176,9 @@ function Home() {
             povratak sigurnosti.
           </p>
 
-          <a href="/donacije" className="donation-link">
+          <Link to="/donacije" className="donation-link">
             Pročitaj priču <span>→</span>
-          </a>
+          </Link >
         </div>
       </div>
 
@@ -196,9 +204,9 @@ function Home() {
     </div>
 
     <div className="text-center mt-5">
-      <a href="/donacije" className="all-packages-btn">
+      <Link to="/donacije" className="all-packages-btn">
         Pogledaj sve donacije
-      </a>
+      </Link>
     </div>
   </div>
 </section>

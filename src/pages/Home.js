@@ -92,7 +92,7 @@ function Home() {
   <div className="container">
     <div className="text-center mb-5">
       <h2 className="section-title">
-        Naši <span className="highlight-font">paketi</span>
+        <span className="highlight-font">Naši</span>  paketi
       </h2>
       <p className="section-subtitle">
         Odaberi paket koji najbolje odgovara tvom događaju.
@@ -147,7 +147,7 @@ function Home() {
     <div className="text-center mb-5">
       <span className="section-tag">Humanitarna priča</span>
       <h2 className="section-title">
-        Vaše <span className="highlight-font">uspomene</span> pomažu
+        Vaše uspomene <span className="highlight-font">pomažu</span>
       </h2>
       <p className="section-subtitle">
         Svaka fotografija znači novu priliku za nekoga.

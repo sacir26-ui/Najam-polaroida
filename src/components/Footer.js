@@ -37,7 +37,7 @@ function Footer() {
             <h5 className="footer-title">Kontakt</h5>
             <div className="footer-contact-card">
               <p className="footer-person">Martina Posarić</p>
-              <p className="footer-role">Predsjednica Udruge Lice Sreće</p>
+              <p className="footer-role">Predsjednica Udruge Lice sreće</p>
 
               <a href="tel:+385977269583" className="footer-contact-item">
                 <i className="fa-solid fa-phone"></i>
@@ -58,7 +58,7 @@ function Footer() {
             <h5 className="footer-title">Podrška i upiti</h5>
             <div className="footer-contact-card">
               <p className="footer-person">Valentina Divković</p>
-              <p className="footer-role">Volonterka</p>
+              <p className="footer-role">Zamjenica predsjednice Udruge </p>
 
               <a href="tel:+385917287271" className="footer-contact-item">
                 <i className="fa-solid fa-phone"></i>

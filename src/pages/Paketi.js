@@ -109,9 +109,14 @@ function Paketi() {
 
                   <p>{paket.desc}</p>
 
-                  <Link to="/kontakt" className="package-btn">
-                    Zatraži ponudu
-                  </Link >
+                  <Link
+                  to={`/kontakt?paket=${encodeURIComponent(
+                    paket.name + " - " + paket.photos
+                  )}`}
+                  className="package-btn"
+                >
+                  Zatraži ponudu
+                </Link>
                 </div>
               </div>
             ))}
@@ -136,7 +141,10 @@ function Paketi() {
               kreirat ćemo paket posebno za vaš događaj.
             </p>
 
-            <Link to="/kontakt" className="btn-primary-custom">
+            <Link
+              to="/kontakt?paket=Prilago%C4%91eni%20paket"
+              className="btn-primary-custom"
+            >
               Izradi svoj paket
             </Link>
           </div>

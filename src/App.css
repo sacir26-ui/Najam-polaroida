@@ -1280,37 +1280,41 @@ body {
 
 .contact-info-item {
   display: flex;
-  gap: 16px;
   align-items: flex-start;
-  margin-bottom: 24px;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .contact-info-item i {
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
-  background: #b88463;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  font-size: 20px;
+  color: #d4b097;
+  margin-top: 4px;
+  min-width: 22px;
 }
 
 .contact-info-item span {
   display: block;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #d4b097;
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d4b097;
   margin-bottom: 4px;
 }
 
-.contact-info-item a,
 .contact-info-item p {
-  color: #fff;
-  text-decoration: none;
   margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .contact-socials {
@@ -1399,4 +1403,45 @@ body {
   .contact-info-box h3 {
     font-size: 28px;
   }
+}
+.selected-package-box {
+  background: rgba(212, 176, 151, 0.14);
+  border: 1px solid rgba(212, 176, 151, 0.24);
+  border-radius: 20px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+}
+
+.selected-package-box span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #b88463;
+  margin-bottom: 6px;
+}
+
+.selected-package-box strong {
+  font-size: 18px;
+  color: #2b2b2b;
+}
+.form-success-message {
+  background: rgba(70, 163, 98, 0.12);
+  border: 1px solid rgba(70, 163, 98, 0.25);
+  color: #2f7a48;
+  padding: 16px 18px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.form-error-message {
+  background: rgba(214, 75, 75, 0.12);
+  border: 1px solid rgba(214, 75, 75, 0.22);
+  color: #b13b3b;
+  padding: 16px 18px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }

@@ -2,15 +2,23 @@ import { Link } from "react-router-dom";
 import "./navbar.css";
 
 function Navbar() {
+  const closeMenu = () => {
+    const navbar = document.getElementById("mainNavbar");
+
+    if (navbar && navbar.classList.contains("show")) {
+      navbar.classList.remove("show");
+    }
+  };
+
   return (
     <nav className="custom-navbar navbar navbar-expand-lg">
       <div className="container">
 
-        <Link className="navbar-brand custom-brand" to="/">
+        <Link className="navbar-brand custom-brand" to="/" onClick={closeMenu}>
           <img
             src={process.env.PUBLIC_URL + "/np-materijali/logo.png"}
             alt="Najam Polaroida"
-            className="logo" 
+            className="logo"
           />
         </Link>
 
@@ -26,35 +34,58 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="mainNavbar"
+        >
           <ul className="navbar-nav align-items-lg-center custom-nav-list">
 
             <li className="nav-item">
-              <Link className="nav-link custom-nav-link" to="/o-nama">
+              <Link
+                className="nav-link custom-nav-link"
+                to="/o-nama"
+                onClick={closeMenu}
+              >
                 O nama
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link custom-nav-link" to="/proizvodi">
+              <Link
+                className="nav-link custom-nav-link"
+                to="/proizvodi"
+                onClick={closeMenu}
+              >
                 Proizvodi i usluge
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link custom-nav-link" to="/paketi">
+              <Link
+                className="nav-link custom-nav-link"
+                to="/paketi"
+                onClick={closeMenu}
+              >
                 Paketi
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link custom-nav-link" to="/donacije">
+              <Link
+                className="nav-link custom-nav-link"
+                to="/donacije"
+                onClick={closeMenu}
+              >
                 Donacije
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link custom-nav-link nav-contact-btn" to="/kontakt">
+              <Link
+                className="nav-link custom-nav-link nav-contact-btn"
+                to="/kontakt"
+                onClick={closeMenu}
+              >
                 Kontakt
               </Link>
             </li>

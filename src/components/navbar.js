@@ -40,6 +40,17 @@ function Navbar() {
         >
           <ul className="navbar-nav align-items-lg-center custom-nav-list">
 
+          <li className="nav-item">
+            <Link
+              className="nav-link custom-nav-link"
+              to="/"
+              onClick={closeMenu}
+            >
+              Naslovna
+            </Link>
+          </li>
+
+
             <li className="nav-item">
               <Link
                 className="nav-link custom-nav-link"

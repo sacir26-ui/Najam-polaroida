@@ -34,7 +34,8 @@ function Donacije() {
       <section
         className="donations-hero"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(35,20,55,0.78), rgba(97,58,120,0.62)), url(${process.env.PUBLIC_URL}/np-materijali/donacije-hero.jpg)`,
+          backgroundImage: `linear-gradient(135deg, rgba(35,20,55,0.78), rgba(97,58,120,0.62)), url(${process.env.PUBLIC_URL}/np-materijali/donacije-hero.png)`,
+          backgroundPosition: "center 10%",
         }}
       >
         <div className="container donations-hero-content">
@@ -75,12 +76,12 @@ function Donacije() {
             </div>
 
             <div className="donation-stat">
-              <strong>15.000 €+</strong>
+              <strong>5.731,42 €</strong>
               <span>ukupno donirano</span>
             </div>
 
             <div className="donation-stat">
-              <strong>8+</strong>
+              <strong>10</strong>
               <span>obitelji kojima smo pomogli</span>
             </div>
           </div>

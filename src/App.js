@@ -9,13 +9,14 @@ import Paketi from "./pages/Paketi";
 import Donacije from "./pages/Donacije";
 import Kontakt from "./pages/Kontakt";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
 
     
     <Router basename="/sasimovic">
-
+      <ScrollToTop />
 
 
       <Navbar />

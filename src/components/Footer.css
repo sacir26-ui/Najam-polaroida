@@ -1,7 +1,14 @@
 .site-footer {
   position: relative;
-  padding: 95px 0 30px;
-  background: linear-gradient(135deg, #1a1117 0%, #24161f 55%, #1c1319 100%);
+  padding: 42px 0 16px;
+
+  background: linear-gradient(
+    135deg,
+    #1a1117 0%,
+    #24161f 55%,
+    #1c1319 100%
+  );
+
   color: rgba(255, 255, 255, 0.86);
   overflow: hidden;
 }
@@ -10,241 +17,625 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(212, 176, 151, 0.08), transparent 35%);
+
+  background: radial-gradient(
+    circle at top left,
+    rgba(212, 176, 151, 0.08),
+    transparent 38%
+  );
+
   pointer-events: none;
 }
 
-.footer-top {
+.site-footer .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
+
+
+/* =========================
+   GLAVNI RASPORED
+========================= */
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.75fr 1fr 1fr 1.1fr;
-  gap: 24px;
-  align-items: stretch;
+
+  grid-template-columns:
+    310px
+    175px
+    minmax(500px, 1fr);
+
+  gap: 45px;
+
+  align-items: start;
 }
 
 .footer-grid > div {
   min-width: 0;
 }
 
+
+/* =========================
+   LIJEVI DIO - LOGO
+========================= */
+
 .footer-brand {
-  max-width: 320px;
+  max-width: 310px;
+
+  transform: translate(-35px, 25px);
+}
+
+.footer-logo-link {
+  display: inline-block;
 }
 
 .footer-logo {
   height: 70px;
   width: auto;
-  margin-bottom: 22px;
+
+  margin-bottom: 19px;
+
   filter: brightness(1.15);
-  transition: all 0.3s ease;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
-.footer-logo:hover {
-  filter: brightness(1.3) drop-shadow(0 0 12px rgba(212, 176, 151, 0.3));
+.footer-logo-link:hover .footer-logo {
   transform: scale(1.05);
+
+  filter:
+    brightness(1.3)
+    drop-shadow(0 0 12px rgba(212, 176, 151, 0.3));
 }
 
 .footer-text {
+  max-width: 305px;
+
+  margin: 0;
+
   color: rgba(255, 255, 255, 0.72);
-  line-height: 1.9;
+
   font-size: 15px;
-  margin-bottom: 0;
+  line-height: 1.75;
 }
 
+
+/* =========================
+   NASLOVI
+========================= */
+
 .footer-title {
+  position: relative;
+
+  margin: 0 0 23px;
+
+  color: #ffffff;
+
   font-size: 19px;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 24px;
-  position: relative;
 }
 
 .footer-title::after {
   content: "";
+
   display: block;
-  width: 42px;
+
+  width: 40px;
   height: 2px;
+
+  margin-top: 9px;
+
   background: #d4b097;
-  margin-top: 10px;
+
   border-radius: 999px;
+}
+
+
+/* =========================
+   NAVIGACIJA
+========================= */
+
+.footer-navigation {
+  min-width: 175px;
+
+  transform: translate(-30px, 25px);
 }
 
 .footer-links {
   list-style: none;
+
   padding: 0;
   margin: 0;
 }
 
 .footer-links li {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .footer-links a {
+  display: inline-block;
+
   color: rgba(255, 255, 255, 0.74);
+
   text-decoration: none;
-  transition: all 0.3s ease;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .footer-links a:hover {
   color: #d4b097;
-  padding-left: 6px;
+
+  transform: translateX(5px);
 }
 
-.footer-contact-card {
+
+/* =========================
+   CIJELI DESNI DIO
+========================= */
+
+.footer-contact-area {
   width: 100%;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  border-radius: 22px;
-  padding: 25px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+
+  transform: translateX(150px);
 }
 
 
-.footer-person {
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 10px;
-  line-height: 1.25;
+/* =========================
+   VEDRANA - GLAVNI KONTAKT
+========================= */
+
+.footer-primary-contact {
+  position: relative;
+
+  padding-left: 22px;
+
+  border-left: 2px solid #d4b097;
 }
 
-.footer-role {
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 14px;
-  line-height: 1.45;
-  margin-bottom: 20px;
-  min-height: 42px;
-}
+.footer-contact-intro {
+  margin: 0 0 5px;
 
-.footer-contact-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: rgba(255, 255, 255, 0.76);
-  text-decoration: none;
-  margin-bottom: 14px;
-  transition: all 0.3s ease;
-  min-width: 0;
-}
-
-.footer-contact-item:last-child {
-  margin-bottom: 0;
-}
-
-.footer-contact-item span {
-  min-width: 0;
-  overflow-wrap: anywhere;
-  word-break: normal;
-  line-height: 1.35;
-  font-size: 14px;
-}
-
-.footer-contact-item i {
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  background: rgba(212, 176, 151, 0.14);
   color: #d4b097;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+}
+
+.footer-primary-contact h3 {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.footer-primary-role {
+  margin: 0 0 15px;
+
+  color: rgba(255, 255, 255, 0.63);
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   VEDRANA - TELEFON / EMAIL
+========================= */
+
+.footer-primary-links {
+  display: flex;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.footer-primary-links > a {
+  min-width: 200px;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  flex-shrink: 0;
-  transition: all 0.3s ease;
+
+  gap: 11px;
+
+  padding: 11px 14px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.footer-contact-item:hover {
-  color: #ffffff;
-}
+.footer-primary-links > a:hover {
+  background: rgba(212, 176, 151, 0.11);
 
-.footer-contact-item:hover i {
-  background: #d4b097;
-  color: #ffffff;
+  border-color: rgba(212, 176, 151, 0.25);
+
   transform: translateY(-2px);
 }
 
+.footer-contact-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(212, 176, 151, 0.14);
+
+  color: #d4b097;
+
+  font-size: 14px;
+}
+
+.footer-primary-links small {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.footer-primary-links strong {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 13px;
+  font-weight: 500;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   KONTAKTI UDRUGE
+========================= */
+
+.footer-other-contacts {
+  margin-top: 20px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-small-title {
+  margin: 0 0 13px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-other-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+}
+
+
+/* =========================
+   MARTINA / VALENTINA
+========================= */
+
+.footer-person h4 {
+  margin: 0 0 5px;
+
+  color: rgba(255, 255, 255, 0.94);
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.footer-person-role {
+  margin: 0 0 10px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.footer-person > a {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  width: fit-content;
+
+  margin-bottom: 7px;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition: color 0.25s ease;
+}
+
+.footer-person > a:hover {
+  color: #d4b097;
+}
+
+.footer-person > a i {
+  width: 15px;
+
+  flex-shrink: 0;
+
+  color: #d4b097;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   DRUŠTVENE MREŽE
+========================= */
+
+.footer-socials {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.84);
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: #d4b097;
+
+  color: #1a1117;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 9px 20px rgba(212, 176, 151, 0.18);
+}
+
+
+/* =========================
+   DONJI DIO
+========================= */
+
 .footer-bottom {
-  position: relative;
-  z-index: 1;
-  margin-top: 55px;
-  padding-top: 24px;
+  margin-top: 24px;
+
+  padding-top: 14px;
+
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+
   text-align: center;
 }
 
 .footer-bottom p {
   margin: 0;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.52);
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 13px;
 }
 
-@media (max-width: 1200px) {
+
+/* =========================
+   MANJI DESKTOP
+========================= */
+
+@media (max-width: 1199.98px) {
+
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      1fr
+      170px
+      1.5fr;
+
+    gap: 35px;
   }
 
   .footer-brand {
-    max-width: 100%;
+    transform: translate(-10px, 20px);
   }
 
-  .footer-contact-card {
-    min-height: auto;
+  .footer-navigation {
+    transform: translate(-10px, 20px);
   }
 
-  .footer-role {
-    min-height: auto;
+  .footer-contact-area {
+    transform: translateX(45px);
+  }
+
+  .footer-primary-links {
+    flex-direction: column;
+  }
+
+  .footer-primary-links > a {
+    width: 100%;
   }
 }
 
-@media (max-width: 768px) {
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+  }
+
+  .footer-brand {
+    transform: none;
+  }
+
+  .footer-navigation {
+    transform: none;
+  }
+
+  .footer-contact-area {
+    grid-column: 1 / -1;
+
+    transform: none;
+  }
+
+  .footer-primary-links {
+    flex-direction: row;
+  }
+
+  .footer-primary-links > a {
+    width: auto;
+  }
+}
+
+
+/* =========================
+   MOBITEL
+========================= */
+
+@media (max-width: 767.98px) {
+
   .site-footer {
-    padding: 70px 0 28px;
+    padding: 42px 0 18px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 34px;
+
+    gap: 30px;
+  }
+
+  .footer-brand,
+  .footer-navigation,
+  .footer-contact-area {
+    transform: none;
+  }
+
+  .footer-contact-area {
+    grid-column: auto;
+  }
+
+  .footer-logo {
+    height: 62px;
   }
 
   .footer-title {
     margin-bottom: 18px;
+
+    font-size: 18px;
   }
-}
 
-.footer-socials {
-  display: flex;
-  gap: 12px;
-  margin-top: 28px;
-}
+  .footer-text {
+    font-size: 14px;
+  }
 
-.footer-socials a {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.82);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(8px);
-}
+  .footer-links a {
+    font-size: 14px;
+  }
 
-.footer-socials a:hover {
-  background: #d4b097;
-  color: #1a1117;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(212, 176, 151, 0.22);
-}
-.footer-title-spacer {
-  height: 60px;
+  .footer-primary-contact {
+    padding-left: 16px;
+  }
+
+  .footer-primary-contact h3 {
+    font-size: 23px;
+  }
+
+  .footer-primary-links {
+    flex-direction: column;
+  }
+
+  .footer-primary-links > a {
+    width: 100%;
+  }
+
+  .footer-other-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .footer-person h4 {
+    font-size: 15px;
+  }
+
+  .footer-person-role {
+    font-size: 12px;
+  }
+
+  .footer-person > a {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    margin-top: 24px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
 }

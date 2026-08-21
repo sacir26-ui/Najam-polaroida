@@ -203,42 +203,242 @@ body {
   display: none;
 }
 
-.step-card {
-  padding: 38px 25px 30px;
-  text-align: center;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+
+/* CIJELA KARTICA JE LINK */
+
+.step-card-link {
+  display: block;
   height: 100%;
+
+  color: inherit;
+  text-decoration: none;
 }
 
-.step-card:hover {
-  transform: translateY(-8px);
+.step-card-link:hover {
+  color: inherit;
 }
+
+
+/* KARTICA */
+
+.step-card {
+  position: relative;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(212, 176, 151, 0.12);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.055);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.step-card-link:hover .step-card {
+  transform: translateY(-8px);
+
+  border-color: rgba(212, 176, 151, 0.3);
+
+  box-shadow:
+    0 22px 45px rgba(0, 0, 0, 0.1);
+}
+
+
+/* SLIKA GORE */
+
+.step-image {
+  height: 155px;
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: transform 0.5s ease;
+}
+
+.step-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 20, 55, 0.08),
+    rgba(35, 20, 55, 0.22)
+  );
+}
+
+.step-card-link:hover .step-image {
+  transform: scale(1.035);
+}
+
+
+/* DONJI SADRŽAJ */
+
+.step-card-content {
+  position: relative;
+
+  padding: 12px 30px 32px;
+
+  background: #ffffff;
+}
+
+
+/* IKONA */
 
 .step-icon {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 28px;
+  position: relative;
+  z-index: 2;
+
+  width: 68px;
+  height: 68px;
+
+  margin: -24px auto 24px;
+
   border-radius: 18px;
-  background: linear-gradient(135deg, #d4b097, #e6c7a8);
+
+  background: linear-gradient(
+    135deg,
+    #d4b097,
+    #e6c7a8
+  );
+
+  border: 5px solid #ffffff;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(212, 176, 151, 0.3);
-  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 24px rgba(212, 176, 151, 0.3);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .step-icon i {
-  font-size: 28px;
+  font-size: 26px;
+
   color: #ffffff;
+
   line-height: 1;
 }
 
-.step-card:hover .step-icon {
-  transform: translateY(-6px) scale(1.06);
-  box-shadow: 0 16px 35px rgba(212, 176, 151, 0.45);
+.step-card-link:hover .step-icon {
+  transform: translateY(-4px) scale(1.06);
+
+  box-shadow:
+    0 15px 30px rgba(212, 176, 151, 0.4);
+}
+
+
+/* NASLOV */
+
+.step-card h5 {
+  margin-bottom: 11px;
+
+  color: #2b2b2b;
+
+  font-size: 23px;
+  font-weight: 600;
+}
+
+
+/* OPIS */
+
+.step-card p {
+  max-width: 330px;
+
+  margin: 0 auto 21px;
+
+  color: #747474;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* LINK NA DNU */
+
+.step-more {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #b88463;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  transition: color 0.25s ease;
+}
+
+.step-more i {
+  font-size: 13px;
+
+  transition: transform 0.25s ease;
+}
+
+.step-card-link:hover .step-more {
+  color: #9f6d50;
+}
+
+.step-card-link:hover .step-more i {
+  transform: translateX(5px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767.98px) {
+
+  .step-image {
+    height: 140px;
+  }
+
+  .step-card-content {
+    padding: 10px 22px 26px;
+  }
+
+  .step-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: -22px auto 21px;
+  }
+
+  .step-icon i {
+    font-size: 24px;
+  }
+
+  .step-card h5 {
+    font-size: 22px;
+  }
+
+  .step-card p {
+    font-size: 16px;
+  }
+
+  .step-more {
+    font-size: 15px;
+  }
 }
 
 /* PAKETI */

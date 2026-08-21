@@ -44,48 +44,125 @@ function Home() {
 
       <section className="kako-radimo">
   <div className="container text-center">
-   <h2 className="section-title">
-      Kako <span className= "highlight-font"> radimo</span>
-  </h2>
+
+    <h2 className="section-title">
+      Kako <span className="highlight-font">radimo</span>
+    </h2>
+
     <p className="section-subtitle">
       Jednostavno, brzo i s razlogom.
     </p>
 
     <div className="steps-wrapper mt-5">
-      <div className="row justify-content-center">
-        
+      <div className="row justify-content-center g-4">
+
+        {/* REZERVACIJA */}
         <div className="col-md-4">
-          <div className="step-card">
-            <div className="step-icon">
-              <i className="fa-solid fa-calendar-check"></i>
+          <Link to="/paketi" className="step-card-link">
+            <div className="step-card">
+
+              <div
+                className="step-image"
+                style={{
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/np-materijali/paketi-hero.jpg)`
+                }}
+              ></div>
+
+              <div className="step-card-content">
+
+                <div className="step-icon">
+                  <i className="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <h5>Rezerviraš kameru</h5>
+
+                <p>
+                  Odaberi paket i rezerviraj termin za svoj event.
+                </p>
+
+                <span className="step-more">
+                  Pogledaj pakete
+                  <i className="fa-solid fa-arrow-right"></i>
+                </span>
+
+              </div>
             </div>
-            <h5>Rezerviraš kameru</h5>
-            <p>Odaberi paket i rezerviraj termin za svoj event.</p>
-          </div>
+          </Link>
         </div>
 
+
+        {/* FOTKANJE */}
         <div className="col-md-4">
-          <div className="step-card">
-            <div className="step-icon">
-              <i className="fa-solid fa-camera"></i>
+          <Link to="/proizvodi" className="step-card-link">
+            <div className="step-card">
+
+              <div
+                className="step-image"
+                style={{
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/np-materijali/proizvodi-hero.jpg)`
+                }}
+              ></div>
+
+              <div className="step-card-content">
+
+                <div className="step-icon">
+                  <i className="fa-solid fa-camera"></i>
+                </div>
+
+                <h5>Fotkaš uspomene</h5>
+
+                <p>
+                  Gosti dobivaju instant fotografije odmah.
+                </p>
+
+                <span className="step-more">
+                  Pogledaj ponudu
+                  <i className="fa-solid fa-arrow-right"></i>
+                </span>
+
+              </div>
             </div>
-            <h5>Fotkaš uspomene</h5>
-            <p>Gosti dobivaju instant fotografije odmah.</p>
-          </div>
+          </Link>
         </div>
 
+
+        {/* DONACIJE */}
         <div className="col-md-4">
-          <div className="step-card">
-            <div className="step-icon">
-              <i className="fa-solid fa-heart"></i>
+          <Link to="/donacije" className="step-card-link">
+            <div className="step-card">
+
+              <div
+                className="step-image"
+                style={{
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/np-materijali/donacije-hero.png)`
+                }}
+              ></div>
+
+              <div className="step-card-content">
+
+                <div className="step-icon">
+                  <i className="fa-solid fa-heart"></i>
+                </div>
+
+                <h5>Pomažeš drugima</h5>
+
+                <p>
+                  Tvoja uspomena nekome postaje konkretna pomoć.
+                </p>
+
+                <span className="step-more">
+                  Pogledaj donacije
+                  <i className="fa-solid fa-arrow-right"></i>
+                </span>
+
+              </div>
             </div>
-            <h5>Pomažeš drugima</h5>
-            <p>Svaki najam doprinosi obiteljima u potrebi.</p>
-          </div>
+          </Link>
         </div>
 
       </div>
     </div>
+
   </div>
 </section>
 

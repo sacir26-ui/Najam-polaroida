@@ -5,38 +5,38 @@ function Paketi() {
   const paketi = [
     {
       name: "Mini",
-      photos: "20 fotografija",
+      photos: "20 fotografija + 1 instant kamera",
       desc: "Savršen za manje proslave, djeliće trenutaka i kratka druženja.",
     },
     {
       name: "Start",
-      photos: "30 fotografija",
+      photos: "30 fotografija + 1 instant kamera",
       desc: "Odličan izbor za manje evente ili kao nadopuna drugim paketima.",
     },
     {
       name: "Basic",
-      photos: "40 fotografija",
+      photos: "40 fotografija + 1 instant kamera    ",
       desc: "Idealno za rođendane i manje obiteljske događaje.",
     },
     {
       name: "Standard",
-      photos: "50 fotografija",
+      photos: "50 fotografija + 1 instant kamera",
       desc: "Najčešći izbor za manje svadbe, krstitke i manje korporativne evente.",
     },
     {
       name: "Plus",
-      photos: "100 fotografija",
+      photos: "100 fotografija + 1 instant kamera",
       desc: "Super za veća slavlja, tematske evente i foto-kutke.",
       featured: true,
     },
     {
       name: "Premium",
-      photos: "150 fotografija",
+      photos: "150 fotografija + 1 instant kamera",
       desc: "Odlično za proslave s puno gostiju ili cjelodnevne događaje.",
     },
     {
       name: "Pro",
-      photos: "200 fotografija",
+      photos: "200 fotografija + 1 instant kamera",
       desc: "Za veće svadbe i profesionalne evente gdje želite puno uspomena.",
     },
     {

@@ -19,6 +19,11 @@ body {
   max-width: 1450px;
 }
 
+.custom-brand:hover .logo {
+  transform: scale(1.07);
+  filter: brightness(1.12);
+}
+
 .custom-brand {
   display: flex;
   align-items: center;
@@ -26,7 +31,7 @@ body {
   margin: 0;
   flex: 0 0 auto;
   max-width: 180px;
-  overflow: hidden;
+  overflow: visible;
   text-decoration: none;
 }
 
@@ -37,7 +42,9 @@ body {
   height: auto;
   max-height: 100px;
   object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
+
 
 .custom-nav-list {
   gap: 12px;
@@ -100,7 +107,10 @@ body {
   .custom-brand {
     max-width: 160px;
   }
-
+.custom-brand:hover .logo {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
   .logo {
     max-width: 160px;
     max-height: 64px;
@@ -191,3 +201,4 @@ body {
     transform: translateY(-1px);
   }
 }
+

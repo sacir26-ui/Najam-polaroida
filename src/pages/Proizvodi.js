@@ -5,19 +5,19 @@ function Proizvodi() {
   const proizvodi = [
     {
       title: "Najam Instax Wide 400 kamere",
-      format: "108 × 86 mm",
+      format: "Dimenzija fotografije: 108 × 86 mm",
       text: "Pouzdana instant kamera širokog formata, idealna za vjenčanja, rođendane, evente i sve trenutke koje želite odmah pretvoriti u uspomene.",
       icon: "fa-camera-retro",
     },
     {
       title: "Najam Instax LiPlay kamere",
-      format: "86 × 54 mm",
+      format: "Dimenzija fotografije:86 × 54 mm",
       text: "Kombinira digitalni i instant fotoaparat te omogućuje pregled, odabir i ispis omiljenih trenutaka.",
       icon: "fa-camera",
     },
     {
       title: "Najam Instax Wide printera",
-      format: "108 × 86 mm",
+      format: "Dimenzija fotografije: 108 × 86 mm",
       text: "Printer za ispis širokih fotografija direktno s mobitela. Odličan izbor za foto-kutke i događaje.",
       icon: "fa-print",
     },
@@ -77,7 +77,8 @@ function Proizvodi() {
         <div className="container">
           <div className="section-heading text-center">
             <span className="section-kicker">Naša ponuda</span>
-            <h2>Odaberite uređaj ili uslugu za svoj događaj</h2>
+            <h2>Istražite kamere i usluge te odaberite paket koji vam odgovara
+</h2>
             <p>
               Svaki najam istovremeno podržava humanitarni rad Udruge Lice
               Sreće.

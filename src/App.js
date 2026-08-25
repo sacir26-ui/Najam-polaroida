@@ -10,6 +10,7 @@ import Donacije from "./pages/Donacije";
 import Kontakt from "./pages/Kontakt";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import DonacijaDetalj from "./pages/DonacijaDetalj";
 
 function App() {
   return (
@@ -27,6 +28,12 @@ function App() {
         <Route path="/proizvodi" element={<Proizvodi />} />
         <Route path="/paketi" element={<Paketi />} />
         <Route path="/donacije" element={<Donacije />} />
+        <Route path="/donacije" element={<Donacije />} />
+
+          <Route
+            path="/donacije/:slug"
+            element={<DonacijaDetalj />}
+          />
         <Route path="/kontakt" element={<Kontakt />} />
       </Routes>
 

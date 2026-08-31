@@ -38,16 +38,22 @@ const donationPosts = [
       },
 
       {
-        heading: "Humanitarni stand-up za obitelj Kolak",
-        paragraphs: [
-          "Priča obitelji Kolak okupila je i širu zajednicu.",
+            heading: "Humanitarni stand-up za obitelj Kolak",
 
-          "Kako bismo prikupili dodatna sredstva za pomoć, organiziran je humanitarni stand-up show „Best of Hercegovina“. Prihod od prodaje ulaznica usmjeren je obitelji Kolak i nabavi materijala potrebnog za nastavak obnove njihovog doma.",
+            image: "np-materijali/donacije/obitelj-kolak/kolak-standup.jpg",
 
-          "Ova akcija još jednom je pokazala koliko se može postići kada se oko zajedničkog cilja okupe ljudi spremni pomoći – bilo najmom kamere, kupnjom ulaznice, donacijom ili jednostavno širenjem priče.",
-        ],
-      },
+            imageAlt: "Humanitarni stand-up Best of Hercegovina za obitelj Kolak",
 
+            imageCaption: "Humanitarni stand-up „Best of Hercegovina“",
+
+            paragraphs: [
+              "Priča obitelji Kolak okupila je i širu zajednicu.",
+
+              "Kako bismo prikupili dodatna sredstva za pomoć, organiziran je humanitarni stand-up show „Best of Hercegovina“. Prihod od prodaje ulaznica usmjeren je obitelji Kolak i nabavi materijala potrebnog za nastavak obnove njihovog doma.",
+
+              "Ova akcija još jednom je pokazala koliko se može postići kada se oko zajedničkog cilja okupe ljudi spremni pomoći – bilo najmom kamere, kupnjom ulaznice, donacijom ili jednostavno širenjem priče.",
+            ],
+          },
       {
         heading: "Fotografija koja postaje dobro djelo",
         paragraphs: [
@@ -319,94 +325,111 @@ video: "np-materijali/donacije/blagdani/blagdani-video.mp4",
   },
 
 
-  {
-    slug: "danijela-bares",
-    title: "Pomoć Danijeli Bareš i njezinim djevojčicama",
-    subtitle: "Kad zajedništvo znači novi početak",
-    amount: "660,00 €",
-    date: "2026-08-23",
-    excerpt:
-      "U suradnji s Udrugom Sretno odrastanje uključili smo se u pomoć majci dviju djevojčica te osigurali sredstva za račun za plin, hranu i osnovne životne potrepštine.",
+  
+    {
+  slug: "danijela-bares",
+  title: "Pomoć Danijeli Bareš i njezinim djevojčicama",
+  subtitle: "Kad zajedništvo znači novi početak",
+  amount: "660,00 €",
+  date: "2026-08-23",
 
-   coverImage: "np-materijali/donacije/danijela-bares/1.jpg",
-    coverPosition: "center 18%",
-      images: [
-        "np-materijali/donacije/danijela-bares/2.jpg",
+  excerpt:
+    "U suradnji s Udrugom Sretno odrastanje uključili smo se u pomoć majci dviju djevojčica te osigurali sredstva za račun za plin, hranu i osnovne životne potrepštine.",
+
+  coverImage: "np-materijali/donacije/danijela-bares/1.jpg",
+  coverPosition: "center 18%",
+
+  images: [
+    "np-materijali/donacije/danijela-bares/2.jpg",
+  ],
+
+  intro: [
+    "Ponekad su dovoljna samo tri dana da se pokaže koliko veliko srce imaju ljudi kada se netko nađe u teškoj životnoj situaciji.",
+
+    "Danijela Bareš majka je dviju djevojčica koja se, nakon niza teških životnih okolnosti, našla u situaciji u kojoj je sama morala osigurati sigurnost svojoj djeci i podmiriti osnovne životne potrebe.",
+
+    "Za njezinu smo priču saznali zahvaljujući humanitarnoj akciji Udruge Sretno odrastanje – USOIHST. Kada smo vidjeli njihovu inicijativu, odlučili smo se uključiti i dio sredstava prikupljenih kroz projekt Najam polaroida usmjeriti upravo Danijeli i njezinoj obitelji.",
+  ],
+
+  sections: [
+    {
+      heading: "Prvo smo pomogli podmiriti račun za plin",
+      paragraphs: [
+        "Jedna od najvećih briga s kojima se Danijela u tom trenutku suočavala bio je račun za plin pred isključenjem.",
+
+        "Zahvaljujući svima koji su unajmljivali naše instant kamere i time podržavali projekt Najam polaroida, mogli smo brzo reagirati.",
+
+        "Izdvojili smo 560 eura za podmirenje računa za plin, kako bi Danijela i njezine djevojčice zadržale ono što bi u svakom domu trebalo biti osnovno – siguran i topao prostor za život.",
       ],
-    intro: [
-      "Ponekad su dovoljna samo tri dana da se pokaže koliko veliko srce imaju ljudi kada se netko nađe u teškoj životnoj situaciji.",
+    },
 
-      "Danijela Bareš majka je dviju djevojčica koja se, nakon niza teških životnih okolnosti, našla u situaciji u kojoj je sama morala osigurati sigurnost svojoj djeci i podmiriti osnovne životne potrebe.",
+    {
+      heading: "Nakon računa, napunili smo i košaricu",
 
-      "Za njezinu smo priču saznali zahvaljujući humanitarnoj akciji Udruge Sretno odrastanje – USOIHST. Kada smo vidjeli njihovu inicijativu, odlučili smo se uključiti i dio sredstava prikupljenih kroz projekt Najam polaroida usmjeriti upravo Danijeli i njezinoj obitelji.",
-    ],
+      gallery: [
+        "np-materijali/donacije/danijela-bares/3.jpg",
+        "np-materijali/donacije/danijela-bares/4.jpg",
+      ],
 
-    sections: [
-      {
-        heading: "Prvo smo pomogli podmiriti račun za plin",
-        paragraphs: [
-          "Jedna od najvećih briga s kojima se Danijela u tom trenutku suočavala bio je račun za plin pred isključenjem.",
+      receipt: "np-materijali/donacije/danijela-bares/racun.jpg",
 
-          "Zahvaljujući svima koji su unajmljivali naše instant kamere i time podržavali projekt Najam polaroida, mogli smo brzo reagirati.",
+      receiptAlt:
+        "Račun za kupljene namirnice i osnovne potrepštine",
 
-          "Izdvojili smo 560 eura za podmirenje računa za plin, kako bi Danijela i njezine djevojčice zadržale ono što bi u svakom domu trebalo biti osnovno – siguran i topao prostor za život.",
-        ],
-      },
+      receiptCaption:
+        "Račun za kupljene namirnice i osnovne potrepštine u sklopu pomoći Danijeli Bareš i njezinim djevojčicama.",
 
-      {
-        heading: "Nakon računa, napunili smo i košaricu",
-        paragraphs: [
-          "Znali smo da podmirivanje jednog računa neće riješiti sve probleme s kojima se ova obitelj suočava.",
+      paragraphs: [
+        "Znali smo da podmirivanje jednog računa neće riješiti sve probleme s kojima se ova obitelj suočava.",
 
-          "Zato smo nakon prve donacije osigurali još 100 eura za hranu i najpotrebnije namirnice.",
+        "Zato smo nakon prve donacije osigurali još 100 eura za hranu i najpotrebnije namirnice.",
 
-          "Kroz dvije donacije iz projekta Najam polaroida Danijeli Bareš i njezinoj obitelji tako smo osigurali ukupno 660 eura pomoći.",
+        "Kroz dvije donacije iz projekta Najam polaroida Danijeli Bareš i njezinoj obitelji tako smo osigurali ukupno 660 eura pomoći.",
 
-          "Iako novac ne može riješiti svaku životnu poteškoću, može u pravom trenutku ukloniti barem jednu veliku brigu – osigurati grijanje, napuniti hladnjak i pružiti malo prostora za novi početak.",
-        ],
-      },
+        "Iako novac ne može riješiti svaku životnu poteškoću, može u pravom trenutku ukloniti barem jednu veliku brigu – osigurati grijanje, napuniti hladnjak i pružiti malo prostora za novi početak.",
+      ],
+    },
 
-      {
-        heading: "Suradnjom možemo pomoći više",
-        paragraphs: [
-          "Ova priča za nas ima još jednu važnu dimenziju.",
+    {
+      heading: "Suradnjom možemo pomoći više",
+      paragraphs: [
+        "Ova priča za nas ima još jednu važnu dimenziju.",
 
-          "Do Danijele smo došli zahvaljujući radu Udruge Sretno odrastanje – USOIHST, koja je pokrenula humanitarnu akciju kako bi joj pomogla u teškom razdoblju.",
+        "Do Danijele smo došli zahvaljujući radu Udruge Sretno odrastanje – USOIHST, koja je pokrenula humanitarnu akciju kako bi joj pomogla u teškom razdoblju.",
 
-          "Upravo ovakve suradnje pokazuju koliko povezivanje humanitarnih inicijativa, udruga i ljudi koji žele pomoći može imati konkretan rezultat.",
+        "Upravo ovakve suradnje pokazuju koliko povezivanje humanitarnih inicijativa, udruga i ljudi koji žele pomoći može imati konkretan rezultat.",
 
-          "Netko prepozna potrebu. Netko pokrene akciju. Netko je podijeli. A netko svojim najmom instant kamere, možda i ne znajući kome će sredstva jednoga dana biti potrebna, omogući da pomoć zaista stigne do osobe kojoj treba.",
-        ],
-      },
+        "Netko prepozna potrebu. Netko pokrene akciju. Netko je podijeli. A netko svojim najmom instant kamere, možda i ne znajući kome će sredstva jednoga dana biti potrebna, omogući da pomoć zaista stigne do osobe kojoj treba.",
+      ],
+    },
 
-      {
-        heading: "Najam polaroida – fotografije koje postaju pomoć",
-        paragraphs: [
-          "Projekt Najam polaroida temelji se upravo na toj ideji.",
+    {
+      heading: "Najam polaroida – fotografije koje postaju pomoć",
+      paragraphs: [
+        "Projekt Najam polaroida temelji se upravo na toj ideji.",
 
-          "Naše instant kamere putuju na vjenčanja, proslave i druge trenutke koje ljudi žele sačuvati. No nakon što fotografije ostanu kao uspomena, dio sredstava prikupljenih najmom nastavlja svoj put.",
+        "Naše instant kamere putuju na vjenčanja, proslave i druge trenutke koje ljudi žele sačuvati. No nakon što fotografije ostanu kao uspomena, dio sredstava prikupljenih najmom nastavlja svoj put.",
 
-          "Pretvara se u građevinski materijal za obitelj koja je izgubila dom, plaćeni račun za nekoga kome prijeti isključenje, hranu za obiteljski stol ili neku drugu konkretnu pomoć.",
+        "Pretvara se u građevinski materijal za obitelj koja je izgubila dom, plaćeni račun za nekoga kome prijeti isključenje, hranu za obiteljski stol ili neku drugu konkretnu pomoć.",
 
-          "U slučaju Danijele i njezinih djevojčica, taj je put završio s 660 eura pomoći za plin, hranu i osnovne životne potrebe.",
-        ],
-      },
+        "U slučaju Danijele i njezinih djevojčica, taj je put završio s 660 eura pomoći za plin, hranu i osnovne životne potrebe.",
+      ],
+    },
 
-      {
-        heading: "Iza svake pomoći stoje ljudi",
-        paragraphs: [
-          "Najveća vrijednost ove priče ipak nije samo u iznosu koji smo donirali.",
+    {
+      heading: "Iza svake pomoći stoje ljudi",
+      paragraphs: [
+        "Najveća vrijednost ove priče ipak nije samo u iznosu koji smo donirali.",
 
-          "Ona je u tome što se u pravom trenutku povezalo više ljudi oko istog cilja – pomoći jednoj majci da svojoj djeci osigura sigurniju svakodnevicu.",
+        "Ona je u tome što se u pravom trenutku povezalo više ljudi oko istog cilja – pomoći jednoj majci da svojoj djeci osigura sigurniju svakodnevicu.",
 
-          "Hvala Udruzi Sretno odrastanje na pokretanju akcije i svima koji su na bilo koji način sudjelovali u njoj.",
+        "Hvala Udruzi Sretno odrastanje na pokretanju akcije i svima koji su na bilo koji način sudjelovali u njoj.",
 
-          "A posebno hvala svima koji podržavaju Najam polaroida. Svakim najmom omogućujete nam da nastavimo pratiti ovakve priče i, kada možemo, pretvorimo vaše trenutke sreće u nečiji razlog za novu nadu.",
-        ],
-      },
-    ],
-  },
-
+        "A posebno hvala svima koji podržavaju Najam polaroida. Svakim najmom omogućujete nam da nastavimo pratiti ovakve priče i, kada možemo, pretvorimo vaše trenutke sreće u nečiji razlog za novu nadu.",
+      ],
+    },
+  ],
+},
 
   {
     slug: "matija-farkas",

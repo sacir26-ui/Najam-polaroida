@@ -122,11 +122,6 @@ function DonacijaDetalj() {
               {post.title}
             </h1>
 
-            <p className="donation-detail-subtitle">
-              {post.subtitle}
-            </p>
-
-
           </div>
 
         </div>
@@ -142,9 +137,12 @@ function DonacijaDetalj() {
 
           <article className="donation-article">
 
+              <p className="donation-detail-subtitle">
+                {post.subtitle}
+              </p>
 
-            {/* UVOD */}
-            <div className="donation-article-intro">
+              {/* UVOD */}
+              <div className="donation-article-intro">
 
               {post.intro.map((paragraph, index) => (
                 <p key={index}>
@@ -227,34 +225,106 @@ function DonacijaDetalj() {
             )}
 
 
-            {/* =========================
-                TEKST BLOGA
-            ========================= */}
-            {post.sections.map(
-              (section, sectionIndex) => (
-                <section
-                  className="donation-article-block"
-                  key={sectionIndex}
-                >
+    {/* =========================
+    TEKST BLOGA
+========================= */}
+{post.sections.map(
+  (section, sectionIndex) => (
+    <section
+      className="donation-article-block"
+      key={sectionIndex}
+    >
 
-                  <h2>
-                    {section.heading}
-                  </h2>
+      <h2>
+        {section.heading}
+      </h2>
 
-                  {section.paragraphs.map(
-                    (
-                      paragraph,
-                      paragraphIndex
-                    ) => (
-                      <p key={paragraphIndex}>
-                        {paragraph}
-                      </p>
+      {section.paragraphs.map(
+        (
+          paragraph,
+          paragraphIndex
+        ) => (
+          <React.Fragment key={paragraphIndex}>
+
+            <p>
+              {paragraph}
+            </p>
+
+            {/* POJEDINAČNA SLIKA */}
+            {section.image &&
+              paragraphIndex === 0 && (
+                <figure className="donation-inline-image">
+
+                  <img
+                    src={`${process.env.PUBLIC_URL}/${section.image}`}
+                    alt={
+                      section.imageAlt ||
+                      section.heading
+                    }
+                  />
+
+                  {section.imageCaption && (
+                    <figcaption>
+                      {section.imageCaption}
+                    </figcaption>
+                  )}
+
+                </figure>
+              )}
+
+
+            {/* GALERIJA - SLIKE 3 I 4 */}
+            {section.gallery &&
+              paragraphIndex === 1 && (
+                <div className="donation-inline-gallery">
+
+                  {section.gallery.map(
+                    (image, imageIndex) => (
+                      <img
+                        key={imageIndex}
+                        src={`${process.env.PUBLIC_URL}/${image}`}
+                        alt={`Fotografija pomoći ${
+                          imageIndex + 1
+                        }`}
+                      />
                     )
                   )}
 
-                </section>
-              )
-            )}
+                </div>
+              )}
+
+
+            {/* RAČUN */}
+            {section.receipt &&
+              paragraphIndex ===
+                section.paragraphs.length - 1 && (
+                <figure className="donation-receipt">
+
+                  <img
+                    src={`${process.env.PUBLIC_URL}/${section.receipt}`}
+                    alt={
+                      section.receiptAlt ||
+                      "Račun donacije"
+                    }
+                  />
+
+                  {section.receiptCaption && (
+                    <figcaption>
+                      {section.receiptCaption}
+                    </figcaption>
+                  )}
+
+                </figure>
+              )}
+
+          </React.Fragment>
+        )
+      )}
+
+    </section>
+  )
+)}
+
 
           </article>
 

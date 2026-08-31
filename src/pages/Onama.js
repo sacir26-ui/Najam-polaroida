@@ -157,7 +157,7 @@ function Onama() {
 
               <div className="about-collage-item about-collage-bottom">
                 <img
-                  src={`${process.env.PUBLIC_URL}/np-materijali/o-nama/o4.jpg`}
+                  src={`${process.env.PUBLIC_URL}/np-materijali/o-nama/o4.jpeg`}
                   alt="Polaroid fotografija s događaja"
                 />
               </div>
@@ -315,18 +315,23 @@ function Onama() {
                 <div className="about-video-wrap">
 
                   <video
-                    controls
-                    muted
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source
-                      src={`${process.env.PUBLIC_URL}/np-materijali/o-nama/v2.mp4`}
-                      type="video/mp4"
-                    />
+                  controls
+                  muted={true}
+                  playsInline
+                  preload="metadata"
+                  onLoadedMetadata={(e) => {
+                    e.currentTarget.muted = true;
+                  }}
+                >
+                  <source
+                    src={`${process.env.PUBLIC_URL}/np-materijali/o-nama/v2.mp4`}
+                    type="video/mp4"
+                  />
 
-                    Vaš preglednik ne podržava prikaz videa.
-                  </video>
+                  Vaš preglednik ne podržava prikaz videa.
+                </video>
+
+                   
 
                 </div>
 

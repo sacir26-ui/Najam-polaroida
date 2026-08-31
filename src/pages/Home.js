@@ -429,85 +429,84 @@ function Home() {
 
           <div className="row g-4 justify-content-center">
 
-            {/* 50 */}
-            <div className="col-md-4">
-              <div className="package-card">
-                <span className="package-badge">
-                  Standard
-                </span>
+           {/* 50 */}
+<div className="col-md-4">
+  <div className="package-card">
+    <span className="package-badge">
+      Standard
+    </span>
 
-                <h3>
-                  50 fotografija
-                </h3>
+    <h3>
+      50 fotografija
+    </h3>
 
-                <p>
-                  Najčešći izbor za manje svadbe i obiteljske događaje.
-                </p>
+    <p>
+      Najčešći izbor za manje svadbe i obiteljske događaje.
+    </p>
 
-                <Link
-                  to="/kontakt"
-                  className="package-btn"
-                >
-                  Zatraži ponudu
-                </Link>
-              </div>
-            </div>
-
-
-            {/* 100 */}
-            <div className="col-md-4">
-              <div className="package-card featured-package">
-
-                <div className="top-badge">
-                  Najpopularniji
-                </div>
-
-                <span className="package-badge">
-                  Plus
-                </span>
-
-                <h3>
-                  100 fotografija
-                </h3>
-
-                <p>
-                  Odličan balans cijene i količine – idealno za većinu događaja.
-                </p>
-
-                <Link
-                  to="/kontakt"
-                  className="package-btn"
-                >
-                  Zatraži ponudu
-                </Link>
-              </div>
-            </div>
+    <Link
+      to={`/kontakt?paket=${encodeURIComponent("Standard - 50 fotografija")}`}
+      className="package-btn"
+    >
+      Zatraži ponudu
+    </Link>
+  </div>
+      </div>
 
 
-            {/* 150 */}
-            <div className="col-md-4">
-              <div className="package-card">
-                <span className="package-badge">
-                  Premium
-                </span>
+      {/* 100 */}
+      <div className="col-md-4">
+        <div className="package-card featured-package">
 
-                <h3>
-                  150 fotografija
-                </h3>
+          <div className="top-badge">
+            Najpopularniji
+          </div>
 
-                <p>
-                  Za veće proslave i događaje s puno gostiju.
-                </p>
+          <span className="package-badge">
+            Plus
+          </span>
 
-                <Link
-                  to="/kontakt"
-                  className="package-btn"
-                >
-                  Zatraži ponudu
-                </Link>
-              </div>
-            </div>
+          <h3>
+            100 fotografija
+          </h3>
 
+          <p>
+            Odličan balans cijene i količine – idealno za većinu događaja.
+          </p>
+
+          <Link
+            to={`/kontakt?paket=${encodeURIComponent("Plus - 100 fotografija")}`}
+            className="package-btn"
+          >
+            Zatraži ponudu
+          </Link>
+        </div>
+      </div>
+
+
+      {/* 150 */}
+      <div className="col-md-4">
+        <div className="package-card">
+          <span className="package-badge">
+            Premium
+          </span>
+
+          <h3>
+            150 fotografija
+          </h3>
+
+          <p>
+            Za veće proslave i događaje s puno gostiju.
+          </p>
+
+          <Link
+            to={`/kontakt?paket=${encodeURIComponent("Premium - 150 fotografija")}`}
+            className="package-btn"
+          >
+            Zatraži ponudu
+          </Link>
+        </div>
+      </div>
           </div>
 
 

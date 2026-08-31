@@ -1,11 +1,94 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import donationPosts from "../data/donationPosts";
 
+function AnimatedNumber({
+  end,
+  decimals = 0,
+  suffix = "",
+  duration = 1500,
+}) {
+  const [value, setValue] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const numberRef = useRef(null);
+
+  useEffect(() => {
+    const element = numberRef.current;
+
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime = null;
+    let animationFrame;
+
+    const animate = (timestamp) => {
+      if (!startTime) {
+        startTime = timestamp;
+      }
+
+      const progress = Math.min(
+        (timestamp - startTime) / duration,
+        1
+      );
+
+      // Lagano usporavanje pred kraj animacije
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+      setValue(end * easedProgress);
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setValue(end);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [hasStarted, end, duration]);
+
+  const formattedValue = value.toLocaleString("hr-HR", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+
+  return (
+    <strong
+      ref={numberRef}
+      className={`animated-stat-number ${
+        hasStarted ? "stat-number-active" : ""
+      }`}
+    >
+      {formattedValue}
+      {suffix}
+    </strong>
+  );
+}
+
 function Donacije() {
   const sortedDonationPosts = [...donationPosts].sort(
-  (a, b) => new Date(b.date) - new Date(a.date)
-);
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
   return (
     <main className="donations-page page-fade">
 
@@ -21,6 +104,7 @@ function Donacije() {
             rgba(97,58,120,0.62)
           ),
           url(${process.env.PUBLIC_URL}/np-materijali/donacije-hero.png)`,
+          backgroundPosition: "center 20%",
         }}
       >
         <div className="container donations-hero-content">
@@ -72,19 +156,38 @@ function Donacije() {
 
           <div className="donation-stats">
 
-            <div className="donation-stat">
-              <strong>18+</strong>
-              <span>donacija do sada</span>
+            <div className="donation-stat donation-stat-animated">
+              <AnimatedNumber end={18} />
+
+              <span>
+                donacija do sada
+              </span>
             </div>
 
-            <div className="donation-stat">
-              <strong>15.000 €+</strong>
-              <span>ukupno donirano</span>
+
+            <div className="donation-stat donation-stat-animated">
+              <AnimatedNumber
+                end={5731.42}
+                decimals={2}
+                suffix=" €"
+                duration={1800}
+              />
+
+              <span>
+                ukupno donirano
+              </span>
             </div>
 
-            <div className="donation-stat">
-              <strong>8+</strong>
-              <span>obitelji kojima smo pomogli</span>
+
+            <div className="donation-stat donation-stat-animated">
+              <AnimatedNumber
+                end={10}
+                duration={1600}
+              />
+
+              <span>
+                obitelji kojima smo pomogli
+              </span>
             </div>
 
           </div>
@@ -134,7 +237,6 @@ function Donacije() {
 
                   <article className="donation-story-card">
 
-                    {/* SLIKA */}
                     <div
                       className={`donation-story-image ${
                         !post.coverImage
@@ -145,13 +247,13 @@ function Donacije() {
                         post.coverImage
                           ? {
                               backgroundImage: `url(${process.env.PUBLIC_URL}/${post.coverImage})`,
-                              backgroundPosition: post.coverPosition || "center",
+                              backgroundPosition:
+                                post.coverPosition || "center",
                             }
                           : {}
                       }
                     >
 
-                      {/* PRIVREMENO DOK NEMA SLIKE */}
                       {!post.coverImage && (
                         <div className="donation-image-placeholder-content">
 
@@ -165,7 +267,6 @@ function Donacije() {
                       )}
 
 
-                      {/* IZNOS */}
                       <div className="donation-story-amount">
                         {post.amount}
                       </div>
@@ -173,7 +274,6 @@ function Donacije() {
                     </div>
 
 
-                    {/* SADRŽAJ */}
                     <div className="donation-story-content">
 
                       <span className="donation-story-label">

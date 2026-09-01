@@ -40,7 +40,7 @@ const donationPosts = [
       {
             heading: "Humanitarni stand-up za obitelj Kolak",
 
-            image: "np-materijali/donacije/obitelj-kolak/kolak-standup.jpg",
+            image: "np-materijali/donacije/kolak/kolak-standup.jpg",
 
             imageAlt: "Humanitarni stand-up Best of Hercegovina za obitelj Kolak",
 
@@ -337,12 +337,13 @@ video: "np-materijali/donacije/blagdani/blagdani-video.mp4",
     "U suradnji s Udrugom Sretno odrastanje uključili smo se u pomoć majci dviju djevojčica te osigurali sredstva za račun za plin, hranu i osnovne životne potrepštine.",
 
   coverImage: "np-materijali/donacije/danijela-bares/1.jpg",
-  coverPosition: "center 18%",
+coverPosition: "center",
 
-  images: [
-    "np-materijali/donacije/danijela-bares/2.jpg",
-  ],
-
+images: [
+  "np-materijali/donacije/danijela-bares/1.jpg",
+  "np-materijali/donacije/danijela-bares/2.jpg",
+  "np-materijali/donacije/danijela-bares/3.jpg",
+],
   intro: [
     "Ponekad su dovoljna samo tri dana da se pokaže koliko veliko srce imaju ljudi kada se netko nađe u teškoj životnoj situaciji.",
 
@@ -371,14 +372,7 @@ video: "np-materijali/donacije/blagdani/blagdani-video.mp4",
         "np-materijali/donacije/danijela-bares/4.jpg",
       ],
 
-      receipt: "np-materijali/donacije/danijela-bares/racun.jpg",
-
-      receiptAlt:
-        "Račun za kupljene namirnice i osnovne potrepštine",
-
-      receiptCaption:
-        "Račun za kupljene namirnice i osnovne potrepštine u sklopu pomoći Danijeli Bareš i njezinim djevojčicama.",
-
+      
       paragraphs: [
         "Znali smo da podmirivanje jednog računa neće riješiti sve probleme s kojima se ova obitelj suočava.",
 

@@ -157,7 +157,13 @@ function DonacijaDetalj() {
                 GALERIJA
             ========================= */}
             {images.length > 0 && (
-              <div className="donation-detail-gallery">
+              <div
+              className={`donation-detail-gallery ${
+                images.length === 3
+                  ? "donation-detail-gallery-three"
+                  : ""
+              }`}
+>
 
                 {images.map((image, index) => (
                   <button
@@ -294,28 +300,7 @@ function DonacijaDetalj() {
               )}
 
 
-            {/* RAČUN */}
-            {section.receipt &&
-              paragraphIndex ===
-                section.paragraphs.length - 1 && (
-                <figure className="donation-receipt">
-
-                  <img
-                    src={`${process.env.PUBLIC_URL}/${section.receipt}`}
-                    alt={
-                      section.receiptAlt ||
-                      "Račun donacije"
-                    }
-                  />
-
-                  {section.receiptCaption && (
-                    <figcaption>
-                      {section.receiptCaption}
-                    </figcaption>
-                  )}
-
-                </figure>
-              )}
+            
 
           </React.Fragment>
         )

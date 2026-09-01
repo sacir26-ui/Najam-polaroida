@@ -552,26 +552,30 @@
   }
 }
 
-
 /* =========================
-   MOBITEL
+   MOBITEL - FINAL POLISH
 ========================= */
 
 @media (max-width: 767.98px) {
 
   .site-footer {
-    padding: 42px 0 18px;
+    padding: 30px 0 14px;
   }
+
+
+  /* GLAVNI RASPORED */
 
   .footer-grid {
     grid-template-columns: 1fr;
-
-    gap: 30px;
+    gap: 22px;
   }
 
   .footer-brand,
   .footer-navigation,
   .footer-contact-area {
+    max-width: none;
+    min-width: 0;
+
     transform: none;
   }
 
@@ -579,63 +583,206 @@
     grid-column: auto;
   }
 
+
+  /* =========================
+     LOGO + OPIS
+  ========================= */
+
   .footer-logo {
-    height: 62px;
-  }
+    height: 50px;
 
-  .footer-title {
-    margin-bottom: 18px;
-
-    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   .footer-text {
-    font-size: 14px;
+    max-width: 340px;
+
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .footer-socials {
+    gap: 8px;
+
+    margin-top: 13px;
+  }
+
+  .footer-socials a {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+  }
+
+
+  /* =========================
+     NASLOVI
+  ========================= */
+
+  .footer-title {
+    margin-bottom: 13px;
+
+    font-size: 16px;
+  }
+
+  .footer-title::after {
+    width: 30px;
+    height: 2px;
+
+    margin-top: 6px;
+  }
+
+
+  /* =========================
+     NAVIGACIJA - 2 STUPCA
+  ========================= */
+
+  .footer-links {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 25px;
+    row-gap: 8px;
+  }
+
+  .footer-links li {
+    margin: 0;
   }
 
   .footer-links a {
-    font-size: 14px;
+    font-size: 13px;
   }
 
+
+  /* =========================
+     VEDRANA
+  ========================= */
+
   .footer-primary-contact {
-    padding-left: 16px;
+    padding-left: 13px;
+  }
+
+  .footer-contact-intro {
+    margin-bottom: 3px;
+
+    font-size: 11px;
   }
 
   .footer-primary-contact h3 {
-    font-size: 23px;
+    margin-bottom: 2px;
+
+    font-size: 20px;
   }
+
+  .footer-primary-role {
+    margin-bottom: 11px;
+
+    font-size: 12px;
+  }
+
+
+  /* TELEFON + EMAIL */
 
   .footer-primary-links {
     flex-direction: column;
+
+    gap: 8px;
   }
 
   .footer-primary-links > a {
     width: 100%;
+    min-width: 0;
+
+    gap: 9px;
+
+    padding: 8px 10px;
+
+    border-radius: 12px;
+  }
+
+  .footer-contact-icon {
+    width: 31px;
+    height: 31px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+  }
+
+  .footer-primary-links small {
+    margin-bottom: 1px;
+
+    font-size: 8.5px;
+  }
+
+  .footer-primary-links strong {
+    font-size: 11.5px;
+  }
+
+
+  /* =========================
+     OSTALI KONTAKTI
+  ========================= */
+
+  .footer-other-contacts {
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .footer-small-title {
+    margin-bottom: 10px;
+
+    font-size: 10px;
   }
 
   .footer-other-grid {
     grid-template-columns: 1fr;
 
-    gap: 20px;
+    gap: 13px;
   }
 
   .footer-person h4 {
-    font-size: 15px;
+    margin-bottom: 3px;
+
+    font-size: 14px;
   }
 
   .footer-person-role {
-    font-size: 12px;
+    margin-bottom: 6px;
+
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .footer-person > a {
-    font-size: 12px;
+    gap: 6px;
+
+    margin-bottom: 4px;
+
+    font-size: 11.5px;
   }
 
+  .footer-person > a i {
+    width: 13px;
+
+    font-size: 10px;
+  }
+
+
+  /* =========================
+     COPYRIGHT
+  ========================= */
+
   .footer-bottom {
-    margin-top: 24px;
+    margin-top: 17px;
+    padding-top: 11px;
   }
 
   .footer-bottom p {
-    font-size: 12px;
+    font-size: 10.5px;
+    line-height: 1.5;
   }
 }

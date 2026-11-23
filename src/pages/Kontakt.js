@@ -49,6 +49,18 @@ function Kontakt() {
       )
       .then(
         () => {
+
+          /* ===============================================
+             GOOGLE TAG MANAGER - USPJEŠAN LEAD
+          =============================================== */
+          window.dataLayer = window.dataLayer || [];
+
+          window.dataLayer.push({
+            event: "generate_lead",
+            form_name: "kontakt_najam_polaroida",
+          });
+
+
           const successBox = document.createElement("div");
 
           successBox.className = "form-success-message";
